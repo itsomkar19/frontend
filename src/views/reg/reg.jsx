@@ -34,7 +34,7 @@ function Wizard() {
     if(name=='code' && value.length>3){
       try{
         setProcessing(true)
-        const serverHash= await axios.post('http://localhost:1234/api/v1/token/verify',{"code":(value)})
+        const serverHash= await axios.post('https://credbudbackend.onrender.com/api/v1/token/verify',{"code":(value)})
         setServerHash(serverHash)
         setProcessing(false)
       }

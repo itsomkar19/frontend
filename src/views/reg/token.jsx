@@ -11,7 +11,7 @@ const TokenDisplay = () => {
     const fetchData = async () => {
       try {
         // Replace the URL with the actual endpoint to fetch the token
-        const response = await axios.get('http://localhost:1234/api/v1/token/get');
+        const response = await axios.get('https://credbudbackend.onrender.com/api/v1/token/get');
         const token = response.data.token;
         // Extract timestamp and calculate expiration time
         setCode(token.code)
